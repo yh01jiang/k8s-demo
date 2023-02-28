@@ -1,0 +1,19 @@
+image:
+  repository: harbor.k8s.local/course/devops-demo
+  tag: latest
+  pullPolicy: IfNotPresent
+
+ingress:
+  enabled: true
+  ingressClassName: nginx
+  path: /
+  hosts:
+    - devops-demo.k8s.local
+
+resources:
+  limits:
+    cpu: 50m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 128Mi
